@@ -36,6 +36,6 @@ class ArticlesController < ApplicationController
 private
 
   def article_params
-    params.require(:article).permit(:title, :body, :logo)
+    params.require(:article).permit(:title, :body, :logo, :remove_logo)
   end
 end

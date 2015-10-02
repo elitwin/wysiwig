@@ -9,6 +9,7 @@
     wrapper: :horizontal_form do |f| %>
   <%= f.input :title %>
   <%= f.file_field :logo %>
+  <%= f.input :remove_logo, as: :boolean %>
   <%= f.input :body, as: :ckeditor,
       input_html: { ckeditor: {:toolbar => 'Full'} } %>
   <%= f.button :submit %>
