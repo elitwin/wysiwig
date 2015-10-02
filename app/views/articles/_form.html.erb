@@ -8,6 +8,7 @@
 <%= simple_form_for @article, html: { class: 'form-horizontal' },
     wrapper: :horizontal_form do |f| %>
   <%= f.input :title %>
-  <%= f.input :body, as: :text %>
+  <%= f.input :body, as: :ckeditor,
+      input_html: { ckeditor: {:toolbar => 'Full'} } %>
   <%= f.button :submit %>
 <% end %>
