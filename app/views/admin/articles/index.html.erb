@@ -1,0 +1,33 @@
+<div class="page-header">
+  <h1>Listing articles</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Logo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.body %></td>
+        <td><%= article.logo %></td>
+        <td><%= link_to 'Show', [:admin, article], class: 'btn btn-default btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_admin_article_path(article), class: 'btn btn-default btn-xs' %></td>
+        <td><%= link_to 'Destroy', [:admin, article], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_admin_article_path, class: 'btn btn-primary' %>

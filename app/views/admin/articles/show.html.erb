@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<dl class="dl-horizontal">
+  <dt><strong>Title:</strong></dt>
+  <dd><%= @article.title %></dd>
+</dl>
+
+<dl class="dl-horizontal">
+  <dt><strong>Body:</strong></dt>
+  <dd><%= @article.body %></dd>
+</dl>
+
+<dl class="dl-horizontal">
+  <dt><strong>Logo:</strong></dt>
+  <dd><%= @article.logo %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_admin_article_path(@article), class: 'btn btn-default' %>
+<%= link_to 'Back', admin_articles_path, class: 'btn btn-default' %>

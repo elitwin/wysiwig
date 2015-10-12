@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :articles
+  end
   mount Ckeditor::Engine => '/ckeditor'
   resources :articles
   root to: "articles#index"
